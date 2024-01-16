@@ -4,10 +4,15 @@
   font-family: sans-serif; /* asta i fontu da' crek ti ai dat seama da' better safe than sorry */
 }
 
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
 .banner{
   width: 100%; /* asta ocupa 100% din spatiu */
   height: 100vh; /* asta ocupa 100% din spatiu viewport-ului ( adica partea de pagina pe care o vezi cand intri)*/
-  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(imgs/mainpagebg.jpg); 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(imgs/mainpagebg.jpg);
   /* linear-gradientu ala adauga o imagine neagra cu opacitate ca sa dea efectu de imagine intunecata, poza e pusa in folder ca sa fie "organizat tot" */
   background-size: cover; /* sa ocupe imaginea tot spatiu */
   background-position: center; /* sa fie imaginea pozitionata pe mijloc sa n o ia la plimbare */
@@ -58,39 +63,38 @@
   line-height: 25px; /* spatiere intre linii si sus si jos*/
 }
 
-button{
+
+.button {
   width: 200px;
   height: 50px;
-  padding: 15px 0;
+  padding: 15px 25px;
   text-align: center;
   margin: 20px 10px;
   border-radius: 25px;
   font-weight: bold;
   border: 3px solid #699aa5;
   background: transparent;
-  color: #fff;
+  color: #fff; /* Set the link color */
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-button{
-  width: 200px;
-  height: 50px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 3px solid #699aa5;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
+.button:hover span {
+  width: 100%;
 }
 
-span {
+/* Hover effect for the link */
+.button:hover {
+  border: none;
+  color: #fff; /* Change text color on hover if needed */
+  text-decoration: none; /* Remove underline on hover if needed */
+}
+
+/* Span styles for the animation */
+.button span {
   background: #699aa5;
   height: 100%;
   width: 0;
@@ -99,14 +103,36 @@ span {
   left: 0;
   bottom: 0;
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
-
-button:hover span{
+footer{
+  height: 150px;
   width: 100%;
+  justify-content: space-around;
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: row;
 }
 
-button:hover{
-  border: none;
+.column{
+  margin: 25px 100px;
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo{
+  width: auto;
+}
+
+footer ul li{ /* aici setezi stilurile elementelor din lista din navbar */
+  list-style: none; /* sa fie simpla */
+  margin: 0 20px; /* aici pui spatiu de distantare 0 pixeli sus jos si 20 stanga dreapta */
+}
+ 
+footer ul li a{ /* aici setezi stilurile elementelor din lista din navbar */
+  text-decoration: none; /* sa n aiba sublinierea sub */
+  color: #fff;
 }
