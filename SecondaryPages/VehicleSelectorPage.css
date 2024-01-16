@@ -1,0 +1,113 @@
+*{ /* steluta vietii se refera la toate elementele din pagina */
+    margin: 0;
+    padding: 0; /* astea 2 is ca sa nu ai margini si sa fie contentu pe toata suprafata */
+    font-family: sans-serif; /* asta i fontu da' crek ti ai dat seama da' better safe than sorry */
+  }
+  
+  .banner{
+    width: 100%; /* asta ocupa 100% din spatiu */
+    height: 100vh; /* asta ocupa 100% din spatiu viewport-ului ( adica partea de pagina pe care o vezi cand intri)*/
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url('C:\Users\adria\OneDrive\Documents\VS Code projects\Project Lukak\imgs\logo.png'); 
+    /* linear-gradientu ala adauga o imagine neagra cu opacitate ca sa dea efectu de imagine intunecata, poza e pusa in folder ca sa fie "organizat tot" */
+    background-size: cover; /* sa ocupe imaginea tot spatiu */
+    background-position: center; /* sa fie imaginea pozitionata pe mijloc sa n o ia la plimbare */
+  }
+  
+  .navbar{
+    width: 40%; /* 40% latime din toata latimea paginii */
+    margin: auto; /* distantare automata sus jos stanga dreapta care practic il pune frumos pe mijloc*/
+    padding: 35px 0; /* sa puna sus si jos 35 de pixeli distantare si stanga dreapta 0, practic sa l mute mai jos */
+    display: flex; /* este flex si grid, grid e cu coloane si linii, flex nu e ca sal frate am bmw e sa fie flexibil */
+    align-items: center; /* sa alinieze elementele pe mijloc pe verticala */
+    justify-content: space-between; /* si contentu navbar-ului sa fie cu spatiu intre */
+  }
+  
+  .logo{
+    width: 120px;
+    padding: 15;
+  }
+  
+  .navbar ul li{ /* aici setezi stilurile elementelor din lista din navbar */
+    list-style: none; /* sa fie simpla */
+    display: inline; /* sa le arate pe orizontal, nu vertical */
+    margin: 0 20px; /* aici pui spatiu de distantare 0 pixeli sus jos si 20 stanga dreapta */
+  }
+   
+  .navbar ul li a{ /* aici setezi stilurile elementelor din lista din navbar */
+    text-decoration: none; /* sa n aiba sublinierea sub */
+    color: #fff;
+    text-transform: uppercase; /* sa l faca capitalizat automat chiar daca e scris si cu litere mici */
+  }
+  
+  .content{
+    width: 100%;
+    position: absolute; /* pozitia sa fie absoluta in corelatie cu pagina */
+    top: 50%; /* asta il muta cu 50% mai jos, adica sa fie pe mijloc pe vertical */
+    transform: translateY(-50%); /* sa fie tot contentul pus frumos pe mijloc */
+    text-align: center;
+    color: #fff;
+  }
+  
+  .content h1{ /* aici setezi headerele h1 din clasa content */
+    font-size: 70px;
+    margin-top: 80px; /* aici orice header de tip h1 din content o sa aiba fontu de 70pixeli marime | distantare sus de 80 pixeli(practic il muta mai jos) */
+  }
+  
+  .content p{ /* aici setezi paragrafele p din clasa content */
+    margin: 20px auto;/* distantare sus jos 20 pixeli si stanga dreapta automat */
+    line-height: 25px; /* spatiere intre linii si sus si jos*/
+  }
+  
+  button{
+    width: 200px;
+    height: 50px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid #699aa5;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button{
+    width: 200px;
+    height: 50px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid #699aa5;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  span {
+    background: #699aa5;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  
+  button:hover span{
+    width: 100%;
+  }
+  
+  button:hover{
+    border: none;
+  }
+  
