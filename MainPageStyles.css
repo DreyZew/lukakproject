@@ -19,12 +19,10 @@
 }
 
 .navbar{
-  width: 40%; /* 40% latime din toata latimea paginii */
-  margin: auto; /* distantare automata sus jos stanga dreapta care practic il pune frumos pe mijloc*/
   padding: 35px 0; /* sa puna sus si jos 35 de pixeli distantare si stanga dreapta 0, practic sa l mute mai jos */
   display: flex; /* este flex si grid, grid e cu coloane si linii, flex nu e ca sal frate am bmw e sa fie flexibil */
   align-items: center; /* sa alinieze elementele pe mijloc pe verticala */
-  justify-content: space-between; /* si contentu navbar-ului sa fie cu spatiu intre */
+  justify-content: center; /* sa alinieze elementele pe mijloc pe orizontala */
 }
 
 .logo{
@@ -82,18 +80,19 @@
   transition: color 0.3s;
 }
 
+/* asta face animatia aia de stanga-dreapta sub text cand ai click pe */
+
 .button:hover span {
   width: 100%;
 }
 
-/* Hover effect for the link */
+/* asta ascunde borderu cand e clicku pe */
 .button:hover {
   border: none;
-  color: #fff; /* Change text color on hover if needed */
-  text-decoration: none; /* Remove underline on hover if needed */
+  color: #fff; 
+  text-decoration: none; /* sterge underline u */
 }
 
-/* Span styles for the animation */
 .button span {
   background: #699aa5;
   height: 100%;
